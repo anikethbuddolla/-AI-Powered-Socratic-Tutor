@@ -89,3 +89,21 @@
 - Brief: (fill in)
 - What Claude proposed: see conversation
 - Verification: (fill in)
+
+## Task 14 -- docs: add TASK.md decomposition and BUILD_LOG.md with entries for all 12 tasks
+- Date: 2026-06-01 08:00
+- Brief: (fill in)
+- What Claude proposed: see conversation
+- Verification: (fill in)
+
+## Task 15 -- docs: add TASK.md decomposition and BUILD_LOG.md with entries for all 12 tasks
+- Date: 2026-06-01 08:00
+- Brief: (fill in)
+- What Claude proposed: see conversation
+- Verification: (fill in)
+
+## Task 16 -- docs: add TASK.md decomposition and BUILD_LOG.md with entries for all 12 tasks
+- Date: 2026-06-01 08:09
+- Brief: (fill in)
+- What Claude proposed: see conversation
+- Verification: (fill in)
