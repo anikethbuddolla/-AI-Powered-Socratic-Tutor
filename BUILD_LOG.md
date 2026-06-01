@@ -104,25 +104,18 @@
 
 **Where the agentic workflow let me ship things I couldn't have alone in 4 hours**
 
-The honest answer is: most of it. Twelve features in a single session — API integration, a complete component hierarchy, Tailwind accessibility, error rollback, animated loading states — would have taken me a full day if I were writing each piece from scratch and looking things up as I went. The thing that surprised me most was the Anthropic API integration in Task 4. I knew roughly what a fetch call looked like, but I didn't know the exact header combination required for direct browser-side access, including `anthropic-dangerous-allow-direct-api-key-access`. Claude Code had that right immediately. Without it I would have lost an hour to docs and CORS debugging before writing a single line of real logic.
+    Twelve features in a single session — API integration, a complete component hierarchy, Tailwind accessibility, error rollback, animated loading states — would have taken me a full day if I were writing each piece from scratch and looking things up as I went. The thing that surprised me most was the Anthropic API integration in Task 4. I knew roughly what a fetch call looked like, but I didn't know the exact header combination required for direct browser-side access, including `anthropic-dangerous-allow-direct-api-key-access`. Claude Code had that right immediately. Without it I would have lost an hour to docs and CORS debugging before writing a single line of real logic.
 
-**Where I had to step in**
+    **Where I had to step in**
 
-Task 1. Claude generated a solid CLAUDE.md but it didn't know what a Socratic tutor was actually supposed to feel like — it described the app as a chat interface, not as a teaching philosophy. I added the Socratic prompt strategy section myself because that was the core product decision. The AI can execute against a brief but it can't write the brief. That's still mine.
+    Task 1. Claude generated a solid CLAUDE.md but it didn't know what a Socratic tutor was actually supposed to feel like — it described the app as a chat interface, not as a teaching philosophy. I added the Socratic prompt strategy section myself because that was the core product decision. The AI can execute against a brief but it can't write the brief. That's still mine.
 
-**What this project revealed about my judgment and my knowledge gaps**
+    **What this project revealed about my judgment and my knowledge gaps**
 
-This is the question I keep sitting with. The gap I noticed most wasn't technical — it was evaluative. Every task came back as-proposed. I approved all twelve without a single rollback. On one hand, the output was genuinely good. On the other hand, I have to ask myself: was I actually reviewing these diffs, or just reading them? There's a difference between understanding code and recognizing that code looks plausible. I can read a React component and follow what it does. What I'm less sure about is whether I would have caught a subtle bug — an off-by-one in state, a stale closure in a `useCallback`, a race condition between `setMessages` calls. I didn't encounter those here, but I don't know if that's because the code was clean or because my review wasn't deep enough to find them.
+    This is the question I keep sitting with. The gap I noticed most wasn't technical — it was evaluative. Every task came back as-proposed. I approved all twelve without a single rollback. On one hand, the output was genuinely good. On the other hand, I have to ask myself: was I actually reviewing these diffs, or just reading them? There's a difference between understanding code and recognizing that code looks plausible. I can read a React component and follow what it does. What I'm less sure about is whether I would have caught a subtle bug — an off-by-one in state, a stale closure in a `useCallback`, a race condition between `setMessages` calls. I didn't encounter those here, but I don't know if that's because the code was clean or because my review wasn't deep enough to find them.
 
-The knowledge gap that became clearest: prompt engineering. I've read about it but I've never designed a prompt from scratch that had to be reliable under adversarial inputs. The `buildSystemPrompt` function worked, but I couldn't tell you with confidence why the `[[UNLOCKED]]` token approach is better than alternatives, or what breaks it. I accepted it because it made sense. That's not the same as knowing it.
+    The knowledge gap that became clearest: prompt engineering. I've read about it but I've never designed a prompt from scratch that had to be reliable under adversarial inputs. The `buildSystemPrompt` function worked, but I couldn't tell you with confidence why the `[[UNLOCKED]]` token approach is better than alternatives, or what breaks it. I accepted it because it made sense. That's not the same as knowing it.
 
-**How I'll bring this into my internship**
+    **How I'll bring this into my internship**
 
 The workflow I'll actually use: read the codebase first, then use Claude Code to navigate and extend it, not to generate from nothing. On day one I'll spend the first hour reading existing code so I understand the conventions and constraints before I ask AI to touch anything. The mistake I want to avoid is treating Claude Code as a shortcut past understanding — using it to ship features I don't actually comprehend. The risk isn't that the AI writes bad code. The risk is that it writes plausible code I can't reason about when something breaks at 2am. The first thing I'll do is make sure I could explain every function it writes, not just approve it.
-
-
-## Task 13 -- a
-- Date: 2026-06-01 17:49
-- Brief: (fill in)
-- What Claude proposed: see conversation
-- Verification: (fill in)
