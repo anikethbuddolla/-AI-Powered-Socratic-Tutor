@@ -89,3 +89,9 @@
 - Brief: (fill in)
 - What Claude proposed: see conversation
 - Verification: (fill in)
+
+## Task 14 -- docs: fill in BUILD_LOG.md entries for all 12 tasks
+- Date: 2026-06-01 08:21
+- Brief: (fill in)
+- What Claude proposed: see conversation
+- Verification: (fill in)
