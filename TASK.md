@@ -1,0 +1,14 @@
+
+M5 — Task Decomposition: AI-Powered Socratic Tutor
+Task 1 — Scaffold & CLAUDE.md: Create the React artifact shell with a CLAUDE.md that documents architecture decisions, the Socratic prompt strategy, and component structure. Verify: CLAUDE.md exists and describes the system prompt design and component tree.
+Task 2 — Static Chat UI: Build the chat interface with message bubbles, input box, and send button — no API yet, just hardcoded messages. Verify: UI renders, input clears on submit, messages appear in the thread.
+Task 3 — Subject Selector: Add a subject picker (Math, Science, History, etc.) that sets context for the session. Verify: Selecting a subject updates visible state and resets the conversation.
+Task 4 — Claude API Integration: Wire the send button to the Anthropic API with a basic (non-Socratic) system prompt to confirm the plumbing works. Verify: Typing a message and submitting returns a real Claude response in the chat.
+Task 5 — Socratic System Prompt: Replace the generic prompt with a carefully engineered Socratic prompt that instructs Claude to ask guiding questions, never give direct answers first, and track reasoning quality. Verify: Ask "What is the Pythagorean theorem?" and receive a question back, not a definition.
+Task 6 — Conversation Memory: Pass the full message history on each API call so the tutor maintains context across turns. Verify: A 4-turn conversation shows the tutor building on previous student responses.
+Task 7 — Hint & Reveal System: Add "Give me a hint" and     "Just tell me" buttons that send special trigger messages, with the prompt instructing Claude to respond accordingly. Verify: "Just tell me" produces a direct answer; "Give me a hint" produces a nudge, not the answer.
+Task 8 — Reasoning Quality Feedback: After each student response, the tutor briefly affirms correct reasoning or gently flags misconceptions before asking the next question. Verify: A wrong answer gets corrected with encouragement, not ignored.
+Task 9 — Session Progress Indicator: Track and display how many exchanges have happened and surface a "concept unlocked" message when the tutor judges the student has demonstrated understanding. Verify: After a successful explanation, a visible milestone appears in the UI.
+Task 10 — Loading & Error States: Add a typing indicator while awaiting the API and a graceful error message if the call fails. Verify: Simulate a slow response; spinner appears. Kill the network; error message appears.
+Task 11 — Visual Polish & Accessibility: Style message bubbles to distinguish tutor vs. student, add keyboard submit (Enter key), and ensure sufficient color contrast. Verify: Tab navigation works; Enter submits; tutor/student bubbles are visually distinct.
+Task 12 — New Session / Reset: Add a "Start Over" button that clears history and lets the student pick a new subject. Verify: Clicking reset clears all messages and returns to the subject selector.
