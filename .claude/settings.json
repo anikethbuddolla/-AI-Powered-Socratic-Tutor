@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$d = Get-Date -Format 'yyyy-MM-dd HH:mm'; $c = (git log -1 --pretty=format:'%s' 2>$null); if (-not $c) { $c = 'no commits yet' }; $con = Get-Content 'BUILD_LOG.md' -Raw -ErrorAction SilentlyContinue; $n = ([regex]::Matches($con, '## Task \\d+').Count + 1); Add-Content 'BUILD_LOG.md' \"`n## Task $n -- $c`n- Date: $d`n- Brief: (fill in)`n- What Claude proposed: see conversation`n- Verification: (fill in)\"",
+            "statusMessage": "Appending build log entry..."
+          }
+        ]
+      }
+    ]
+  }
+}
